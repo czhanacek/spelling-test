@@ -7,7 +7,8 @@ function readCookie(name) {
 }
 // Passes testObject (array of words to be tested on)
 function loadTest() {	
-	var testObject = readCookie(testObject);
+	//var testObject = readCookie(testObject);
+	var testObject = ["cat", "dog", "mouse", "fish"];
 	for(word in wordList) {
 		playAudioFile(word);
 		waitForSubmission();
@@ -27,9 +28,13 @@ function playAudioFile(word) {
 	soundFile.load();
 	soundFile.currentTime = 0.01;
 	soundFile.play();
+	soundFile.parentNode.removeChild(soundFile);
 }
 
 function waitForSubmission(
-	while(
+	while(wordSubmitted === false) {
+		;
+	}
 function setSubmitted() {
 	wordSubmitted = true;
+	
