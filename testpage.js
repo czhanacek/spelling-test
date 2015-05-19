@@ -1,91 +1,75 @@
-var wordsCorrect = 0;
-var currentWordIndex = 0;
-var wordList = []
-var userResponseList = []
-var responseImg;
-function readCookie(name) {
-	var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
-	result && (result = JSON.parse(result[1]));
-	return result;
-}
-// Passes testObject (array of words to be tested on)
-function loadTest() {	
-	//var testObject = readCookie(testObject);
-	// Eventually this will read a value from the cookie.
-	// For now, it will just instantiate the wordList array
-	wordList = ["the", "of", "and", "a", "to"];
-	
-	console.log(wordList[currentWordIndex]);
-	doWord(wordList[currentWordIndex]);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
 
-}
-function handleTest() {
-	loadTest();
-	doWord(wordList[0]);
-}
-function doWord(word) {
-	playWordAudio(word);
-}
-function wordSubmitted() {
-	var userSubmission = document.getElementById("wordSubmission").value;
-	document.getElementById("wordSubmission").value = "";
-	userResponseList.push(userSubmission);
-	if(userSubmission.toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
-		wordsCorrect++;
-		console.log(wordsCorrect);
-		doCorrect();
-	}
-	else {
-		doWrong();
-	}
-	
-	if(wordList.length - 1 > currentWordIndex) {
-		currentWordIndex++;
-	}
-	else {
-		currentWordIndex = 0;
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="handleTest();">
+
+    <div class="container-fluid">
 		
-		//proceedToResults();
-	}
+	  <br>
+	  <br>
+	  
+	      <div class="form-group">
+		<div class="col-lg-10 text-center container-fluid">
+		  <input style="text-align: center;font-size: 25pt;height:50px;" autoautocomplete="off" id="wordSubmission" class="btn-block btn-large" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('submitSpell').click()">
+		</div>
+	      </div>
+	  
+	  <br>
+	    
+	  <button id="submitSpell" onclick="wordSubmitted();" class="btn btn-block btn-large"><img class="img-responsive" src="img/sm-gr-arw.png"></img></button>
+	<button id="replay" onclick="playAudioFile(wordList[currentWordIndex]);" class="btn btn-block btn-large"><img class="img-responsive" src="img/sm-gr-arw.png"></img></button>
+	  <br>
+	  <div id="imageContainer">
+	    
+	  </div>
+    </div>
 	
-	doWord(wordList[currentWordIndex]);
-	//document.getElementById("feedbackImg").src = "";
-}
-function bake_cookie(name, value) {
-	var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
-	document.cookie = cookie;
-}
+     <!-- /container -->
 
-// Plays word sound file using HTML5 <audio> tag
-function playWordAudio(word) {
-	playAudioFile(word + ".mp3");
-}
-function doCorrect() {
-	playAudioFile("crct.wav");
-	responseImage("green-check.png");
-}
-function doWrong() {
-	playAudioFile("wrg.wav");
-	responseImage("red-x.png");
-}
-function responseImage(img) {
-	var text = "<img style=\"height: 25%; width: 25%; display: block;margin-left: auto; margin-right: auto;\" class=\"img-responsive\" src=\"img/" + img + "\"></img>"
-	document.getElementById("imageContainer").innerHTML = text;
-	setTimeout(removeImage, 1000);
-}
-function removeImage() {
-	document.getElementById("imageContainer").innerHTML = "";
-	
-}
-function playAudioFile(file) {
-	var soundFile = document.createElement("audio");
-	soundFile.preload = "auto";
-	soundFile.src = "audioFiles/" + file;
-	soundFile.load();
-	soundFile.currentTime = -1.00;
-	soundFile.play();
-	soundFile.remove();
-}
-
-
-
+    <!-- Le javascript
+    ================================================== -->
+    <script src="testpage.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+	-->
+  </body>
+</html>
