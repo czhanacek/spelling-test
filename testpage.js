@@ -1,12 +1,8 @@
 var wordsCorrect = 0;
-<<<<<<< HEAD
-var wordSubmitted = false;
-var currentWord = "";
-=======
 var currentWordIndex = 0;
 var wordList = []
 var userResponseList = []
->>>>>>> 8102c0bdb5eb9f66a39ba233fdff230faaa04367
+
 function readCookie(name) {
 	var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
 	result && (result = JSON.parse(result[1]));
@@ -15,33 +11,33 @@ function readCookie(name) {
 // Passes testObject (array of words to be tested on)
 function loadTest() {	
 	//var testObject = readCookie(testObject);
-<<<<<<< HEAD
-	var wordList = ["cat", "dog", "mouse", "fish"];
-	for(var i = 0; i<wordList.length; i++) {
-		console.log(wordList[i]);
-		currentWord = wordList[i];
-		playAudioFile(wordList[i]);
-		waitForSubmission();
-		//checkSubmission();
-=======
+	// Eventually this will read a value from the cookie.
+	// For now, it will just instantiate the wordList array
 	wordList = ["cat", "dog", "mouse", "fish"];
-	currentWordIndex = 0;
+	
+	console.log(wordList[currentWordIndex]);
+	doWord(wordList[currentWordIndex]);
+
 }
 function handleTest() {
 	loadTest();
 	doWord(wordList[0]);
 }
 function doWord(word) {
-	playAudioFile(word);
+	playWordAudio(word);
 }
 function wordSubmitted() {
 	var userSubmission = document.getElementById("wordSubmission").value;
 	userResponseList.push(userSubmission);
 	if(userSubmission === wordList[currentWordIndex]) {
 		wordsCorrect++;
->>>>>>> 8102c0bdb5eb9f66a39ba233fdff230faaa04367
+		console.log(wordsCorrect);
+		playCorrect();
 	}
-	if(wordList.length - 1 >= currentWordIndex) {
+	else {
+		playWrong();
+	}
+	if(wordList.length - 1 > currentWordIndex) {
 		currentWordIndex++;
 	}
 	doWord(wordList[currentWordIndex]);
@@ -53,26 +49,24 @@ function bake_cookie(name, value) {
 }
 
 // Plays word sound file using HTML5 <audio> tag
-function playAudioFile(word) {
+function playWordAudio(word) {
+	playAudioFile(word + ".mp3");
+}
+function playCorrect() {
+	playAudioFile("crct.wav");
+}
+function playWrong() {
+	playAudioFile("wrg.wav");
+}
+function playAudioFile(file) {
 	var soundFile = document.createElement("audio");
 	soundFile.preload = "auto";
-	soundFile.src = "wordFiles/" + word + ".mp3";
+	soundFile.src = "audioFiles/" + file;
 	soundFile.load();
 	soundFile.currentTime = 0.01;
 	soundFile.play();
-<<<<<<< HEAD
 	soundFile.remove();
 }
 
-function waitForSubmission() {
-	
-	return;
-}
 
-function setSubmitted() {
-	wordSubmitted = true;
-}
-=======
-	soundFile.remove(soundFile);
-}
->>>>>>> 8102c0bdb5eb9f66a39ba233fdff230faaa04367
+
