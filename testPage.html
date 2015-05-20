@@ -27,7 +27,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body onload="handleTest();">
+  <body onload="handleTest();" style="background-color: rgb(200, 255, 230);">
 
     <div class="container-fluid">
 		
@@ -36,12 +36,15 @@
 	  
 	      <div class="form-group">
 		<div class="col-lg-10 text-center container-fluid">
-		  <input style="text-align: center;font-size: 25pt;height:50px;" autoautocomplete="off" id="wordSubmission" class="btn-block btn-large" type="text" onkeydown="if (event.keyCode == 13) document.getElementById('submitSpell').click()">
+		  <input style="background-color: rgb(255, 255, 255); text-align: center;font-size: 25pt;height:50px;" autoautocomplete="off" id="wordSubmission" class="btn-block btn-large" type="text">
+		  <button id="submitSpell" onclick="replayWord();" class="img-responsive btn btn-large"><img style="height: 40px;" class="img-responsive" src="img/replay-arrow.png"></img></button>
+		  </input>
 		</div>
+		
 	      </div>
 	  
 	  <br>
-	  <button id="submitSpell" onclick="playAudioFile(wordList[currentWordIndex]);" class="btn"><img class="img-responsive" src="img/replay-arrow.png"></img></button>
+	  
 	  <button id="submitSpell" onclick="wordSubmitted();" class="btn btn-block btn-large"><img class="img-responsive" src="img/sm-gr-arw.png"></img></button>
 	  <br>
 	  <div id="imageContainer">

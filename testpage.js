@@ -24,31 +24,45 @@ function handleTest() {
     doWord(wordList[0]);
 }
 function doWord(word) {
-    playWordAudio(word);
+    if(word === undefined) {
+        playWordAudio(wordList[currentWordIndex]);
+    }
+    else {
+        playWordAudio(word);
+    }
+}
+function replayWord() {
+    playWordAudio(wordList[currentWordIndex]);
 }
 function wordSubmitted() {
     var userSubmission = document.getElementById("wordSubmission").value;
     document.getElementById("wordSubmission").value = "";
     userResponseList.push(userSubmission);
-    if(userSubmission.toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
+    if (userSubmission === "") {
+        highlightTextField();
+    }
+    else {
+        if(userSubmission.toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
             wordsCorrect++;
             console.log(wordsCorrect);
             doCorrect();
-    }
-    else {
+        }
+    
+        else {
             doWrong();
+        }
+    
+        if(wordList.length - 1 > currentWordIndex) {
+                currentWordIndex++;
+        }
+        else {
+                currentWordIndex = 0;
+    
+                //proceedToResults();
+        }
     }
-
-    if(wordList.length - 1 > currentWordIndex) {
-            currentWordIndex++;
-    }
-    else {
-            currentWordIndex = 0;
-
-            //proceedToResults();
-    }
-
-    doWord(wordList[currentWordIndex]);
+    
+    setTimeout(doWord, 500);
     //document.getElementById("feedbackImg").src = "";
 }
 function bake_cookie(name, value) {
@@ -58,7 +72,7 @@ function bake_cookie(name, value) {
 
 // Plays word sound file using HTML5 <audio> tag
 function playWordAudio(word) {
-    
+    playAudioFile(word + ".mp3");
 }
 function doCorrect() {
     playAudioFile("crct.wav");
@@ -76,6 +90,18 @@ function responseImage(img) {
 function removeImage() {
     document.getElementById("imageContainer").innerHTML = "";
 
+}
+function highlightTextField() {
+    pinkTextField()
+    setTimeout(whiteTextField, 500);
+
+}
+
+function pinkTextField() {
+    document.getElementById("wordSubmission").style.backgroundColor = "rgb(255, 200, 200)";
+}
+function whiteTextField() {
+    document.getElementById("wordSubmission").style.backgroundColor = "rgb(255, 255, 255)";
 }
 function playAudioFile(file) {
     var soundFile = document.createElement("audio");
