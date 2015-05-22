@@ -13,8 +13,9 @@ function loadTest() {
     //var testObject = readCookie(testObject);
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
-    wordList = ["the", "of", "and", "a", "to"];
-
+    //wordList = ["the", "of", "and", "a", "to"];
+    item = localStorage.getItem("wordList");
+    wordList = JSON.parse(item);
     console.log(wordList[currentWordIndex]);
     doWord(wordList[currentWordIndex]);
 
@@ -111,4 +112,12 @@ function playAudioFile(file) {
     soundFile.currentTime = -1.00;
     soundFile.play();
     soundFile.remove();
+}
+
+function supports_html5_storage() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch (e) {
+        return false;
+    }
 }
