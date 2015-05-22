@@ -20,6 +20,7 @@ function loadTest() {
     doWord(wordList[currentWordIndex]);
 
 }
+// This is a test
 function handleTest() {
     loadTest();
     doWord(wordList[0]);
