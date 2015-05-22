@@ -12,8 +12,17 @@ function doHandoff(testID) {
     item = ""
     switch(testID) {
         case 1:
-            wordList = ["cat", "and", "a", "to", "of"];
-            item = JSON.stringify(wordList);
+            	item = JSON.stringify(oA1);
+	case 2:
+		item = JSON.stringify(oA2);
+	case 3:
+		item = JSON.stringify(oA3);
+	case 4:
+		item = JSON.stringify(oB1);
+	case 5:
+		item = JSON.stringify(oB2);
+	case 6:
+		item = JSON.stringify(oB3);
          
             
     }
