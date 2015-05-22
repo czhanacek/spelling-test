@@ -7,6 +7,7 @@ function supports_html5_storage() {
         return false;
     }
 }
+// test
 function doHandoff(testID) {
     item = ""
     switch(testID) {
