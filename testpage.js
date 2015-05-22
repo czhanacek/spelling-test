@@ -3,23 +3,35 @@ var currentWordIndex = 0;
 var wordList = []
 var userResponseList = []
 var responseImg;
-function readCookie(name) {
-    var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
-    result && (result = JSON.parse(result[1]));
-    return result;
+function getCookie(c_name) {
+    if (document.cookie.length > 0) {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1) {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) {
+                c_end = document.cookie.length;
+            }
+            return unescape(document.cookie.substring(c_start, c_end));
+        }
+    }
+    return "";
 }
 // Passes testObject (array of words to be tested on)
 function loadTest() {
-    //var testObject = readCookie(testObject);
+    var wordList = getCookie("testObject");
+    console.log(wordList);
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
     //wordList = ["the", "of", "and", "a", "to"];
+
     item = localStorage.getItem("wordList");
     wordList = JSON.parse(item);
     console.log(wordList[currentWordIndex]);
     doWord(wordList[currentWordIndex]);
 
 }
+
 // This is a test
 function handleTest() {
     loadTest();
