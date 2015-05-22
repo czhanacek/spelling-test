@@ -8,11 +8,15 @@ function supports_html5_storage() {
     }
 }
 function doHandoff(testID) {
-    item = ""
+    var item = "";
+    var wordList = "";
     switch(testID) {
         case 1:
             wordList = ["cat", "and", "a", "to", "of"];
             item = JSON.stringify(wordList);
+	case 2:
+		wordList = ["dude", "gal", "cat", "dog"];
+		item = JSON.stringify(wordList);
          
             
     }
