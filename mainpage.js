@@ -9,9 +9,11 @@ function supports_html5_storage() {
 }
 // test
 function doHandoff(testID) {
-    item = ""
+    var item = "";
+    var wordList = "";
     switch(testID) {
         case 1:
+
             	item = JSON.stringify(oA1);
 	case 2:
 		item = JSON.stringify(oA2);
@@ -23,11 +25,12 @@ function doHandoff(testID) {
 		item = JSON.stringify(oB2);
 	case 6:
 		item = JSON.stringify(oB3);
+
          
             
     }
     localStorage.setItem("wordList", item);
-    window.location.href = "testpage.html";
+    window.location.href = "testPage.html";
 }
 var oA1 = ["the", "of", "and", "a","to"];
 var oA2 = ["in", "is", "you","that","is"];
