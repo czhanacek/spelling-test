@@ -21,7 +21,7 @@ function doHandoff(testID) {
             
     }
     localStorage.setItem("wordList", item);
-    window.location.href = "testpage.html";
+    window.location.href = "testPage.html";
 }
 var oA1 = ["the", "of", "and", "a","to"];
 var oA2 = ["in", "is", "you","that","is"];
