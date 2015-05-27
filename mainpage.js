@@ -33,7 +33,7 @@ function doHandoff(testID) {
     window.location.href = "testPage.html";
 }
 var oA1 = ["the", "of", "and", "a","to"];
-var oA2 = ["in", "is", "you","that","is"];
+var oA2 = ["in", "is", "you","that","it"];
 var oA3 = ["he", "for", "was","on","are"];
 var oB1 = ["as", "with", "his","they","at"];
 var oB2 = ["be", "this", "from", "I", "have"];

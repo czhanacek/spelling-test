@@ -3,32 +3,19 @@ var currentWordIndex = 0;
 var wordList = []
 var userResponseList = []
 var responseImg;
-function getCookie(c_name) {
-    if (document.cookie.length > 0) {
-        c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1) {
-            c_start = c_start + c_name.length + 1;
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1) {
-                c_end = document.cookie.length;
-            }
-            return unescape(document.cookie.substring(c_start, c_end));
-        }
-    }
-    return "";
-}
+
 // Passes testObject (array of words to be tested on)
 function loadTest() {
     
     
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
-    //wordList = ["the", "of", "and", "a", "to"];
+    //wordList = ["cat", "dog", "and", "a", "to"];
 
     item = localStorage.getItem("wordList");
     wordList = JSON.parse(item);
     console.log(wordList[currentWordIndex]);
-    doWord(wordList[currentWordIndex]);
+    //doWord(wordList[currentWordIndex]);
 
 }
 
@@ -70,18 +57,20 @@ function wordSubmitted() {
                 currentWordIndex++;
         }
         else {
-                currentWordIndex = 0;
-    
-                //proceedToResults();
+                //currentWordIndex = 0;
+    		localStorage["wordList"] = undefined;
+                proceedToResults();
         }
     }
     
     setTimeout(doWord, 500);
     //document.getElementById("feedbackImg").src = "";
 }
-function bake_cookie(name, value) {
-    var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
-    document.cookie = cookie;
+function proceedToResults() {
+	var final = [wordList, userResponseList, wordsCorrect];
+	item = JSON.stringify(final);
+	localStorage.setItem("results", item);
+	window.location.href = "results.html"
 }
 
 // Plays word sound file using HTML5 <audio> tag
