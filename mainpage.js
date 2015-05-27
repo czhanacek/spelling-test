@@ -13,7 +13,6 @@ function doHandoff(testID) {
     var wordList = "";
     switch(testID) {
         case 1:
-
             	item = JSON.stringify(oA1);
 	case 2:
 		item = JSON.stringify(oA2);
@@ -25,6 +24,163 @@ function doHandoff(testID) {
 		item = JSON.stringify(oB2);
 	case 6:
 		item = JSON.stringify(oB3);
+
+	case 7:
+		item = JSON.stringify(twoC1);
+	case 8:
+		item = JSON.stringify(twoC2);
+	case 9:
+		item = JSON.stringify(twoC3);
+	case 10:
+		item = JSON.stringify(twoD1);
+	case 11:
+		item = JSON.stringify(twoD2);
+	case 12:
+		item = JSON.stringify(twoD3);
+
+	case 13:
+		item = JSON.stringify(thrE1);
+	case 14:
+		item = JSON.stringify(thrE2);
+	case 15:
+		item = JSON.stringify(thrE3);
+	case 16:
+		item = JSON.stringify(thrF1);
+	case 17:
+		item = JSON.stringify(thrF2);
+	case 18:
+		item = JSON.stringify(thrF3);
+
+	case 19:
+		item = JSON.stringify(forG1);
+	case 20:
+		item = JSON.stringify(forG2);
+	case 21:
+		item = JSON.stringify(forG3);
+	case 22:
+		item = JSON.stringify(forH1);
+	case 23:
+		item = JSON.stringify(forH2);
+	case 24:
+		item = JSON.stringify(forH3);
+
+	case 25:
+		item = JSON.stringify(fivI1);
+	case 26:
+		item = JSON.stringify(fivI2);
+	case 27:
+		item = JSON.stringify(fivI3);
+	case 28:
+		item = JSON.stringify(fivJ1);
+	case 29:
+		item = JSON.stringify(fivJ2);
+	case 30:
+		item = JSON.stringify(fivJ3);
+
+	case 31:
+		item = JSON.stringify(sixK1);
+	case 32:
+		item = JSON.stringify(sixK2);
+	case 33:
+		item = JSON.stringify(sixK3);
+	case 34:
+		item = JSON.stringify(sixL1);
+	case 35:
+		item = JSON.stringify(sixL2);
+	case 36:
+		item = JSON.stringify(sixL3);
+
+	case 37:
+		item = JSON.stringify(sevM1);
+	case 38:
+		item = JSON.stringify(sevM2);
+	case 39:
+		item = JSON.stringify(sevM3);
+	case 40:
+		item = JSON.stringify(sevN1);
+	case 41:
+		item = JSON.stringify(sevN2);
+	case 42:
+		item = JSON.stringify(sevN3);
+
+	case 43:
+		item = JSON.stringify(eiO1);
+	case 44:
+		item = JSON.stringify(eiO2);
+	case 45:
+		item = JSON.stringify(eiO3);
+	case 46:
+		item = JSON.stringify(eiP1);
+	case 47:
+		item = JSON.stringify(eiP2);
+	case 48:
+		item = JSON.stringify(eiP3);
+	
+	case 49:
+		item = JSON.stringify(niQ1);
+	case 50:
+		item = JSON.stringify(niQ2);
+	case 51:
+		item = JSON.stringify(niQ3);
+	case 52:
+		item = JSON.stringify(niR1);
+	case 53:
+		item = JSON.stringify(niR2);
+	case 54:
+		item = JSON.stringify(niR3);
+
+	case 54:
+		item = JSON.stringify(teS1);
+	case 55:
+		item = JSON.stringify(teS2);
+	case 56:
+		item = JSON.stringify(teS3);
+	case 57:
+		item = JSON.stringify(teT1);
+	case 58:
+		item = JSON.stringify(teT2);
+	case 59:
+		item = JSON.stringify(teT3);
+
+	case 60:
+		item = JSON.stringify(elU1);
+	case 61:
+		item = JSON.stringify(elU2);
+	case 62:
+		item = JSON.stringify(elU3);
+	case 63:
+		item = JSON.stringify(elV1);
+	case 64:
+		item = JSON.stringify(elV2);
+	case 65:
+		item = JSON.stringify(elV3);
+
+	case 66:
+		item = JSON.stringify(tweW1);
+	case 67:
+		item = JSON.stringify(tweW2);
+	case 68:
+		item = JSON.stringify(tweW3);
+	case 69:
+		item = JSON.stringify(tweX1);
+	case 70:
+		item = JSON.stringify(tweX2);
+	case 71:
+		item = JSON.stringify(tweX3);	
+
+
+	case 71:
+		item = JSON.stringify(thteY1);	
+	case 72:
+		item = JSON.stringify(thteY2);	
+	case 73:
+		item = JSON.stringify(thteY3);	
+	case 74:
+		item = JSON.stringify(thteZ1);	
+	case 75:
+		item = JSON.stringify(thteZ2);	
+	case 76:
+		item = JSON.stringify(thteZ3);	
 
          
             
