@@ -19,8 +19,8 @@ function getCookie(c_name) {
 }
 // Passes testObject (array of words to be tested on)
 function loadTest() {
-    var wordList = getCookie("testObject");
-    console.log(wordList);
+    
+    
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
     //wordList = ["the", "of", "and", "a", "to"];
