@@ -1,34 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
+    <title>Spell Tester</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
 
-</head>
-<body onload = "runnerFunc()">
-<div class="text-center container-fluid">
-    <h1>How Did You Do? </h1>
-    <p id="f3"></p>
-    <p>Your percentage:</p>
-    <div class="progress">
-        <div id="percent-progress-bar" class="progress-bar active" role="progressbar">
-
-        </div>
+  <body onload = "runnerFunc()">
+    <div class="text-center container-fluid">
+    <div id="head">
+      <center><font size="50" color="#BE3535"><i><b>How Did You Do?</i></b></font>
     </div>
-    <p id="f2"></p>
-    <p id="user-answers"></p>
-    <p id="correct-answers"></p>
+    <center><div class="panel panel-success" style="width:95%">
+      <div class="panel-heading">
+        <p id="f3"></p>
+        <center><p><b>Your Score:</b></p> 
+          <div class="progress">
+            <div id="percent-progress-bar" class="progress-bar active" role="progressbar">
+            </div>
+
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">THE ANSWERS</h3>
+</div> 
+<div class="container">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th><center><font color="#000000"><b>Your Answers</th>
+        <th><center><font color="#000000">Correct Spelling</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><center><font color="#000000"><p id="user-answers"></p></td>
+      </tr>
+      <tr>
+        <td><center><font color="#000000"><p id="correct-answers"></p></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 
-<script src="resultP.js"></script>
-
-</body>
+              <p id="success-message"></p>
+            </div>
+          </center>
+          <div align="right">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default" href="#" >Retake</button>
+              <button type="button" class="btn btn-default" href="mainpage.html" >Back to Main</button>
+            </div>
+              </div>
+              <script src="resultP.js"></script>
+  </body>
 </html>
