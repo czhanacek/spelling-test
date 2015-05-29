@@ -10,16 +10,19 @@ function loadTest() {
     
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
-    wordList = ["cat", "dog", "and", "a", "to"];
+    
+	// This is used for testing purposes.
+	//wordList = ["cat", "dog", "and", "a", "to"];
 
-    //item = localStorage.getItem("wordList");
-    //wordList = JSON.parse(item);
+    item = localStorage.getItem("wordList");
+    wordList = JSON.parse(item);
     console.log(wordList[currentWordIndex]);
     //doWord(wordList[currentWordIndex]);
 
 }
 
-// This is a test
+// Loads our test and starts the user off
+// with the first word in the word array (wordList)
 function handleTest() {
     loadTest();
     
