@@ -10,10 +10,10 @@ function loadTest() {
     
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
-    //wordList = ["cat", "dog", "and", "a", "to"];
+    wordList = ["cat", "dog", "and", "a", "to"];
 
-    item = localStorage.getItem("wordList");
-    wordList = JSON.parse(item);
+    //item = localStorage.getItem("wordList");
+    //wordList = JSON.parse(item);
     console.log(wordList[currentWordIndex]);
     //doWord(wordList[currentWordIndex]);
 
@@ -22,6 +22,7 @@ function loadTest() {
 // This is a test
 function handleTest() {
     loadTest();
+    
     doWord(wordList[0]);
 }
 function doWord(word) {
@@ -70,7 +71,7 @@ function proceedToResults() {
 	var final = [wordList, userResponseList, wordsCorrect];
 	item = JSON.stringify(final);
 	localStorage.setItem("results", item);
-	window.location.href = "results.html"
+	window.location.href = "resultPage.html"
 }
 
 // Plays word sound file using HTML5 <audio> tag

@@ -9,17 +9,20 @@
 
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	<style>
-   h1 {text-align:center;}
-   p {text-align:center;}
-   </style>
+	
   </head>
   <body onload = "runnerFunc()">
-    <h1>How Did You Do? </h1>
+    <div class="text-center container-fluid">
+      <h1>How Did You Do? </h1>
 	<p id="f3"></p>
 	<p>Your percentage:</p>
-	<p id="f1"></p>
+	<div class="progress">
+	  <div id="percent-progress-bar" class="progress-bar active" role="progressbar">
+	  
+	  </div>
+	</div>
 	<p id="f2"></p>
+    </div>
    
 	
     <script src="resultP.js"></script>

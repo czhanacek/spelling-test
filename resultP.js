@@ -1,14 +1,16 @@
 		var wordList;
-		var wordTotal = wordList.length;
+		var wordTotal = 0;
 		var userAnswers;
 		var numCorrect;
 		//pass off wordlist, store it in localstorage, redirect to test page (button) and button to main page
 		
 		function grabStuff() {
 			 results = localStorage.getItem("results");
-			 wordList = JSON.parse(results[0]);
-			 userAnswers = JSON.parse(results[1]);
-			 numCorrect = JSON.parse(results[2]);
+			 wordList = JSON.parse(results)[0];
+                         console.log(wordList)
+                         wordTotal = wordList.length;
+			 userAnswers = JSON.parse(results)[1];
+			 numCorrect = JSON.parse(results)[2];
 		}
 		 
 		
@@ -26,7 +28,18 @@
 		function calcPercent(numCorrect, wordTotal) {
 			var percent = (numCorrect/wordTotal) *100;
 			percent = percent.toPrecision(3);
-			document.getElementById("f1").innerHTML = percent + "%";
+                        progressBar = document.getElementById("percent-progress-bar");
+                        progressBar.innerHTML = percent + "%";
+                        progressBar.style.width = percent + "%";
+                        if (percent >= 75) {
+                           progressBar.className += " progress-bar-success"
+                        }
+                        else if (percent < 75 && percent > 50) {
+                           progressBar.className += " progress-bar-warning"
+                        }
+                        else {
+                           progressBar.className += " progress-bar-danger"
+                        }
 			
 		}
 		
@@ -46,7 +59,7 @@
 		}
 		
 		function tally(numCorrect,wordTotal) {
-			document.getElementById("f3").innerHTML = "You got " + correct + " words correct out of " + total + ".";
+			document.getElementById("f3").innerHTML = "You got " + numCorrect + " words correct out of " + wordTotal + ".";
 		}
 		
 		function showResponses(userAnswers, wordList) {
