@@ -14,10 +14,9 @@ function loadTest() {
 	// This is used for testing purposes.
 	//wordList = ["cat", "dog", "and", "a", "to"];
 
-    item = window.localStorage.getItem("wordList");
-    
+    item = localStorage.getItem("wordList");
     wordList = JSON.parse(item);
-    console.log(wordList);
+    console.log(wordList[currentWordIndex]);
     //doWord(wordList[currentWordIndex]);
 
 }
@@ -63,7 +62,7 @@ function wordSubmitted() {
         }
         else {
                 //currentWordIndex = 0;
-    		window.localStorage["wordList"] = undefined;
+    		localStorage["wordList"] = undefined;
                 proceedToResults();
         }
     }
@@ -74,7 +73,7 @@ function wordSubmitted() {
 function proceedToResults() {
 	var final = [wordList, userResponseList, wordsCorrect];
 	item = JSON.stringify(final);
-	window.localStorage.setItem("results", item);
+	localStorage.setItem("results", item);
 	window.location.href = "resultPage.html"
 }
 
