@@ -40,6 +40,7 @@
                         else {
                            progressBar.className += " progress-bar-danger"
                         }
+			return percent
 			
 		}
 		
@@ -47,19 +48,19 @@
 		function greet() {
 			var score = calcPercent(numCorrect,wordTotal);
 			var greeting;
-			if (score === 100) {
+			if (score == 100) {
 				greeting = "Great job!";
 			} else if (score > 85) {
 				greeting = "Good job!";
 			} else {
 				greeting = "You're on your way!";
 			}
-			document.getElementById("f2").innerHTML = greeting;
+			document.getElementById("success-message").innerHTML = greeting;
 		
 		}
 		
 		function tally(numCorrect,wordTotal) {
-			document.getElementById("f3").innerHTML = "You got " + numCorrect + " words correct out of " + wordTotal + ".";
+			document.getElementById("you-got").innerHTML = "You got " + numCorrect + " words correct out of " + wordTotal + ".";
 		}
 		
 		function showResponses(userAnswers, wordList) {
