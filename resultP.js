@@ -75,7 +75,14 @@ function tally(numCorrect,wordTotal) {
 function showResponsesvCorrect() {
     var list = "";
     for (i=0; i<userAnswers.length;i++) {
-        list += "<tr><td>" + userAnswers[i] + "</td><td>" + wordList[i] + "</td></tr>";
+	list += "<tr>";
+	if(userAnswers[i] == wordList[i]) {
+		list += "<p class=\"glyphicon-ok\"></p>";
+	}
+	else {
+		list += "<p class=\"glyphicon-remove\"></p>";
+	}
+	list += "<td>" + userAnswers[i] + "</td><td>" + wordList[i] + "</td></tr>";
 	
     }
     document.getElementById("responseTable").innerHTML = list;
