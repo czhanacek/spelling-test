@@ -77,10 +77,10 @@ function showResponsesvCorrect() {
     for (i=0; i<userAnswers.length;i++) {
 	list += "<tr>";
 	if(userAnswers[i] == wordList[i]) {
-		list += "<p class=\"glyphicon-ok\"></p>";
+		list += "<td><p class=\"glyphicon glyphicon-ok\"></p></td>";
 	}
 	else {
-		list += "<p class=\"glyphicon-remove\"></p>";
+		list += "<td><p class=\"glyphicon glyphicon-remove\"></p></td>";
 	}
 	list += "<td>" + userAnswers[i] + "</td><td>" + wordList[i] + "</td></tr>";
 	
