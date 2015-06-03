@@ -43,6 +43,7 @@ function wordSubmitted() {
     var userSubmission = document.getElementById("wordSubmission").value;
     document.getElementById("wordSubmission").value = "";
     userResponseList.push(userSubmission);
+    document.getElementById("wordSubmission").focus();
     if (userSubmission === "") {
         highlightTextField();
     }

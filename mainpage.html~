@@ -31,11 +31,12 @@
 
 <body>
 
-<div class="container-fluid">
+<div class="container">
 	<h1>Spelling Tests</h1>
 	<p>Please select a spelling test by going to the test letter, and then clicking on the test number</p>
+<br>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test A</button>
                 <ul class="dropdown-menu">
@@ -46,7 +47,7 @@
             </div>
         </div>
     
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test B</button>
                 <ul class="dropdown-menu">
@@ -56,7 +57,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test C</button>
                 <ul class="dropdown-menu">
@@ -66,7 +67,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test D</button>
                 <ul class="dropdown-menu">
@@ -76,7 +77,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test E</button>
                 <ul class="dropdown-menu">
@@ -86,7 +87,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test F</button>
                 <ul class="dropdown-menu">
@@ -99,7 +100,7 @@
 	</div>
     	<br>
     	<div class="row">
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test G</button>
                 <ul class="dropdown-menu">
@@ -110,7 +111,7 @@
             </div>
         </div>
 	
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test H</button>
                 <ul class="dropdown-menu">
@@ -120,7 +121,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test I</button>
                 <ul class="dropdown-menu">
@@ -130,7 +131,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test J</button>
                 <ul class="dropdown-menu">
@@ -140,7 +141,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test K</button>
                 <ul class="dropdown-menu">
@@ -150,7 +151,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test L</button>
                 <ul class="dropdown-menu">
@@ -163,7 +164,7 @@
 	</div>
     	<br>
     	<div class="row">
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test M</button>
                 <ul class="dropdown-menu">
@@ -174,7 +175,7 @@
             </div>
         </div>
 
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test N</button>
                 <ul class="dropdown-menu">
@@ -184,7 +185,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test O</button>
                 <ul class="dropdown-menu">
@@ -194,7 +195,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test P</button>
                 <ul class="dropdown-menu">
@@ -204,7 +205,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test Q</button>
                 <ul class="dropdown-menu">
@@ -214,7 +215,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test R</button>
                 <ul class="dropdown-menu">
@@ -227,7 +228,7 @@
 	</div>
     	<br>
     	<div class="row">
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test S</button>
                 <ul class="dropdown-menu">
@@ -238,7 +239,7 @@
             </div>
         </div>
 
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test T</button>
                 <ul class="dropdown-menu">
@@ -248,7 +249,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test U</button>
                 <ul class="dropdown-menu">
@@ -258,7 +259,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test V</button>
                 <ul class="dropdown-menu">
@@ -268,7 +269,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test W</button>
                 <ul class="dropdown-menu">
@@ -278,7 +279,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test X</button>
                 <ul class="dropdown-menu">
@@ -291,7 +292,7 @@
 	</div>
     	<br>
     	<div class="row">
-        <div class="col-md-1">
+        <div class="col-sm-1 offset-col-lg-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test Y</button>
                 <ul class="dropdown-menu">
@@ -301,7 +302,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test Z</button>
                 <ul class="dropdown-menu">
@@ -326,7 +327,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/ie10-viewport-bug-workaround.js"></script>
 
 
 

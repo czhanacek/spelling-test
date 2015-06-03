@@ -76,11 +76,11 @@ function showResponsesvCorrect() {
     var list = "";
     for (i=0; i<userAnswers.length;i++) {
 	list += "<tr>";
-	if(userAnswers[i] == wordList[i]) {
-		list += "<td><p class=\"glyphicon glyphicon-ok\"></p></td>";
+	if(userAnswers[i].toLowerCase() == wordList[i].toLowerCase()) {
+		list += "<td><span><img src='img/green-check.png' height=10px width=10px /n></span></td>";
 	}
 	else {
-		list += "<td><p class=\"glyphicon glyphicon-remove\"></p></td>";
+		list += "<td><span><img src='img/red-x.png' height=10px width=10px /n></span></td>";
 	}
 	list += "<td>" + userAnswers[i] + "</td><td>" + wordList[i] + "</td></tr>";
 	
