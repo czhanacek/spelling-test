@@ -13,11 +13,11 @@
   <body onload = "runnerFunc()">
     <div class="text-center container-fluid">
     <div id="head">
-      <center><font size="50" color="#BE3535"><i><b>How Did You Do?</i></b></font>
+      <h1 style="color: #BE3535; align: center;">How Did You Do?</h1>
     </div>
     <center><div class="panel panel-success" style="width:95%">
       <div class="panel-heading">
-        <p id="f3"></p>
+        <p id="you-got"></p>
         <center><p><b>Your Score:</b></p> 
           <div class="progress">
             <div id="percent-progress-bar" class="progress-bar active" role="progressbar">
@@ -32,17 +32,12 @@
   <table class="table table-condensed">
     <thead>
       <tr>
-        <th><center><font color="#000000"><b>Your Answers</th>
-        <th><center><font color="#000000">Correct Spelling</b></th>
+        <th style="align: center; font-weight: bold;">Your Answers</th>
+        <th >Correct Spelling</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td><center><font color="#000000"><p id="user-answers"></p></td>
-      </tr>
-      <tr>
-        <td><center><font color="#000000"><p id="correct-answers"></p></td>
-      </tr>
+    <tbody id="responseTable">
+      
     </tbody>
   </table>
 </div>
@@ -53,8 +48,8 @@
           </center>
           <div align="right">
             <div class="btn-group" role="group" aria-label="...">
-              <button type="button" class="btn btn-default" href="#" >Retake</button>
-              <button type="button" class="btn btn-default" href="mainpage.html" >Back to Main</button>
+              <button id="retake" type="button" onclick="retake();" class="btn btn-default" href="#" >Retake</button>
+              <button onclick="toMain();" type="button" class="btn btn-default" href="mainpage.html">Back to Main</button>
             </div>
               </div>
               <script src="resultP.js"></script>

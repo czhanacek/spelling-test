@@ -15,7 +15,6 @@ function loadTest() {
 	//wordList = ["cat", "dog", "and", "a", "to"];
 
     item = window.localStorage.getItem("wordList");
-    
     wordList = JSON.parse(item);
     console.log(wordList);
     //doWord(wordList[currentWordIndex]);
@@ -64,7 +63,7 @@ function wordSubmitted() {
         else {
                 //currentWordIndex = 0;
     		window.localStorage["wordList"] = undefined;
-                proceedToResults();
+                setTimeout(proceedToResults, 500);
         }
     }
     

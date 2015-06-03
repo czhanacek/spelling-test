@@ -18,10 +18,18 @@ function runnerFunc() {
     grabStuff();
     greet();
     tally(numCorrect,wordTotal);
+	showResponsesvCorrect();
 
 }
 
-
+function retake() {
+	item = JSON.stringify(wordList);
+	window.localStorage.setItem("wordList", item);
+	window.location.href = "testPage.html";
+}
+function toMain() {
+	window.location.href = "mainpage.html";
+}
 
 
 
@@ -63,21 +71,13 @@ function tally(numCorrect,wordTotal) {
     document.getElementById("you-got").innerHTML = "You got " + numCorrect + " words correct out of " + wordTotal + ".";
 }
 
-function showResponses(userAnswers, wordList) {
-    var list = "";
-    for (i=0; i<wordList.length;i++) {
-        list+= wordList[i] + "<br>";
 
-    }
-    document.getElementById("user-answers").innerHTML = list;
-}
-
-function showCorrect(wordList) {
+function showResponsesvCorrect() {
     var list = "";
     for (i=0; i<userAnswers.length;i++) {
-        list+= userAnswers[i] + "<br>";
-
+        list += "<tr><td>" + userAnswers[i] + "</td><td>" + wordList[i] + "</td></tr>";
+	
     }
-    document.getElementById("correct-answers").innerHTML = list;
+    document.getElementById("responseTable").innerHTML = list;
 
 }
