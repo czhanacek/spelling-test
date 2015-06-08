@@ -50,7 +50,7 @@ function wordSubmitted() {
         highlightTextField();
     }
     else {
-        if(userSubmission.toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
+        if(userSubmission.toString().toLowerCase() == wordList[currentWordIndex].toString().toLowerCase()) {
             wordsCorrect++;
             console.log(wordsCorrect);
             doCorrect();
@@ -115,7 +115,9 @@ function whiteTextField() {
 function playWordAudio(word) {
     playAudioFile(word + ".mp3")
 }
-
+function returnHome() {
+    window.location.href = "mainpage.html"
+}
 function playAudioFile(file) {
     var soundFile = document.createElement("audio");
     soundFile.src = "audioFiles/" + file;
