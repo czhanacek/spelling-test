@@ -18,7 +18,7 @@ function loadTest() {
     item = window.localStorage.getItem("wordList");
     wordList = JSON.parse(item);
     console.log(wordList);
-    soundFile = document.createElement("audio");
+
     //doWord(wordList[currentWordIndex]);
 
 }
@@ -31,8 +31,6 @@ function handleTest() {
     doWord(wordList[0]);
 }
 function doWord(word) {
-    soundFile.src = "audioFiles/" + file + ".mp3";
-    soundFile.load();
     if(word === undefined) {
         playWordAudio(wordList[currentWordIndex]);
     }
@@ -113,10 +111,18 @@ function pinkTextField() {
 function whiteTextField() {
     document.getElementById("wordSubmission").style.backgroundColor = "rgb(255, 255, 255)";
 }
+
+function playWordAudio(word) {
+    playAudioFile(word + ".mp3")
+}
+
 function playAudioFile(file) {
-    soundFile = document.createElement("audio");
+    var soundFile = document.createElement("audio");
+    soundFile.src = "audioFiles/" + file;
+    soundFile.load();
     soundFile.preload = "auto";
     soundFile.play();
+    soundFile.remove();
 }
 
 function supports_html5_storage() {
