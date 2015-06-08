@@ -6,7 +6,7 @@ var oB2 = ["be", "this", "from", "I", "have"];
 var oB3 = ["or", "by", "one","had","not"];
 
 var twoC1 = ["but", "all", "when","can","your","what","were","we","there","an"];
-var twoC2 = ["which", "said", "do","each","how","their","if","will","about","up"];
+var twoC2 = ["whÄich", "said", "do","each","how","their","if","will","about","up"];
 var twoC3 = ["out", "then", "many","so","would","them","she","some","these","other"];
 var twoD1 = ["into", "more", "two","him","time","has","her","like","see","could"];
 var twoD2 = ["no", "than", "been","who","made","make","first","it's","now","my"];
@@ -37,7 +37,7 @@ var sixK1 = ["point", "play","fire","usually","seen","city","towards","himself",
 var sixK2 = ["car", "i'm", "upon","later","move","morning","body","family","turn","face"];
 var sixK3 = ["door", "done", "true","red","plant","cut","group","half","fish","living"];
 var sixL1 = ["eat", "united states","book","order","ground","short","run","gave","open","become"];
-var sixL2 = ["cold","table","tree","front","space","really","remeber","course","american","inside"];
+var sixL2 = ["cold","table","tree","front","space","really","remember","course","american","inside"];
 var sixL3 = ["ago", "early", "learned","close","though","sad","i'll","brought","nothing","idea"];
 
 var sevM1 = ["before", "became","grow","yet","wind","lived","add","draw","less","behind"];
