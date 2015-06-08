@@ -50,7 +50,7 @@ function wordSubmitted() {
         highlightTextField();
     }
     else {
-        if(userSubmission.toString().toLowerCase() == wordList[currentWordIndex].toString().toLowerCase()) {
+        if(userSubmission.toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
             wordsCorrect++;
             console.log(wordsCorrect);
             doCorrect();
