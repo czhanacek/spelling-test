@@ -54,6 +54,7 @@ function wordSubmitted() {
             wordsCorrect++;
             console.log(wordsCorrect);
             doCorrect();
+	    
         }
     
         else {
@@ -119,14 +120,14 @@ function returnHome() {
     window.location.href = "mainpage.html"
 }
 function playAudioFile(file) {
-    var soundFile = document.createElement("audio");
+    soundFile = document.createElement("audio");
     soundFile.src = "audioFiles/" + file;
     soundFile.load();
     soundFile.preload = "auto";
     soundFile.play();
-    soundFile.remove();
 }
-
+function removeAudioFile() {
+   soundFile.remove();
 function supports_html5_storage() {
     try {
         return 'localStorage' in window && window['localStorage'] !== null;
