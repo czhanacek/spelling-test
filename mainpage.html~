@@ -292,7 +292,7 @@
 	</div>
     	<br>
     	<div class="row">
-        <div class="col-sm-1 offset-col-lg-1">
+        <div class="col-sm-1">
             <div class="btn-group">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Test Y</button>
                 <ul class="dropdown-menu">

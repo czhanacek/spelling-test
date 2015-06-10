@@ -76,7 +76,7 @@ function showResponsesvCorrect() {
     var list = "";
     for (i=0; i<userAnswers.length;i++) {
 	list += "<tr>";
-	if(userAnswers[i].toLowerCase() == wordList[i].toLowerCase()) {
+	if(userAnswers[i].trim().toLowerCase() == wordList[i].toLowerCase()) {
 		list += "<td><span><img src='img/green-check.png' height=10px width=10px /n></span></td>";
 	}
 	else {

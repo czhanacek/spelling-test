@@ -6,7 +6,7 @@ var oB2 = ["be", "this", "from", "I", "have"];
 var oB3 = ["or", "by", "one","had","not"];
 
 var twoC1 = ["but", "all", "when","can","your","what","were","we","there","an"];
-var twoC2 = ["whÄich", "said", "do","each","how","their","if","will","about","up"];
+var twoC2 = ["which", "said", "do","each","how","their","if","will","about","up"];
 var twoC3 = ["out", "then", "many","so","would","them","she","some","these","other"];
 var twoD1 = ["into", "more", "two","him","time","has","her","like","see","could"];
 var twoD2 = ["no", "than", "been","who","made","make","first","it's","now","my"];
@@ -34,11 +34,11 @@ var fivJ2 = ["know", "try", "young","thing","hear","its","told","sun","whole","e
 var fivJ3 = ["heard","change", "room","againist","turned","several","answer","sea","top","learn"];
 
 var sixK1 = ["point", "play","fire","usually","seen","city","towards","himself","money","didn't"];
-var sixK2 = ["car", "i'm", "upon","later","move","morning","body","family","turn","face"];
+var sixK2 = ["car", "I'm", "upon","later","move","morning","body","family","turn","face"];
 var sixK3 = ["door", "done", "true","red","plant","cut","group","half","fish","living"];
 var sixL1 = ["eat", "united states","book","order","ground","short","run","gave","open","become"];
 var sixL2 = ["cold","table","tree","front","space","really","remember","course","american","inside"];
-var sixL3 = ["ago", "early", "learned","close","though","sad","i'll","brought","nothing","idea"];
+var sixL3 = ["ago", "early", "learned","close","though","sad","I'll","brought","nothing","idea"];
 
 var sevM1 = ["before", "became","grow","yet","wind","lived","add","draw","less","behind"];
 var sevM2 = ["cannot", "among", "dog","mean","rest","letter","able","shown","english","perhaps"];
@@ -70,7 +70,7 @@ var teT3 = ["catch", "reach", "won't","speak","eight","business","lot","case","s
 
 var elU1 = ["soft", "object","minute","meet","copy","village","age","wall","record","forest"];
 var elU2 = ["especially", "he's", "flat","south","skin","necessary","unit","direction","subject","wasn't"];
-var elU3 = ["i've", "party", "test","temperature","ahead","yellow","force","bad","pair","wrong"];
+var elU3 = ["I've", "party", "test","temperature","ahead","yellow","force","bad","pair","wrong"];
 var elV1 = ["practice", "tail", "difficult","cover","isn't","sand","wait","general","material","thousand"];
 var elV2 = ["sign", "forward","ride","nor","blood","guess","huge","region","period","rich"];
 var elV3 = ["team", "cat", "garden","note","race","corner","amount","led","various","bit"];

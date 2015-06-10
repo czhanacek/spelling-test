@@ -6,7 +6,7 @@ var oB2 = ["be", "this", "from", "I", "have"];
 var oB3 = ["or", "by", "one","had","not"];
 
 var twoC1 = ["but", "all", "when","can","your","what","were","we","there","an"];
-var twoC2 = ["whÄich", "said", "do","each","how","their","if","will","about","up"];
+var twoC2 = ["which", "said", "do","each","how","their","if","will","about","up"];
 var twoC3 = ["out", "then", "many","so","would","them","she","some","these","other"];
 var twoD1 = ["into", "more", "two","him","time","has","her","like","see","could"];
 var twoD2 = ["no", "than", "been","who","made","make","first","it's","now","my"];
@@ -348,6 +348,7 @@ function doHandoff(testID) {
 		break;
 	case 76:
 		item = JSON.stringify(thteZ3);
+		
 		break;
 
          
@@ -355,6 +356,7 @@ function doHandoff(testID) {
     }
     console.log(item);
     window.localStorage.setItem("wordList", item);
+    
     window.location.href = "testPage.html";
 }
 

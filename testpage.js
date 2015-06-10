@@ -1,9 +1,12 @@
 var wordsCorrect = 0;
 var currentWordIndex = 0;
 var wordList = []
+var audioFiles = []
 var userResponseList = []
 var responseImg;
 var soundFile;
+var correctAudio;
+var wrongAudio;
 
 // Passes testObject (array of words to be tested on)
 function loadTest() {
@@ -12,13 +15,20 @@ function loadTest() {
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
     
-	// This is used for testing purposes.
+	// This is used for testing purposes only.
 	//wordList = ["cat", "dog", "and", "a", "to"];
 
     item = window.localStorage.getItem("wordList");
     wordList = JSON.parse(item);
     console.log(wordList);
-
+    loadCorrect();
+    loadWrong();
+    	for(var i = 0; i<wordList.length; i++) {
+		var soundFile = new Audio("audioFiles/" + wordList[i] + ".mp3");
+		soundFile.load();
+	}
+	
+	whiteTextField();
     //doWord(wordList[currentWordIndex]);
 
 }
@@ -39,9 +49,10 @@ function doWord(word) {
     }
 }
 function replayWord() {
-    playWordAudio(wordList[currentWordIndex]);
+    playWordAudio();
 }
 function wordSubmitted() {
+	audioFiles[currentWordIndex].pause();
     var userSubmission = document.getElementById("wordSubmission").value;
     document.getElementById("wordSubmission").value = "";
     userResponseList.push(userSubmission);
@@ -50,7 +61,7 @@ function wordSubmitted() {
         highlightTextField();
     }
     else {
-        if(userSubmission.toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
+        if(userSubmission.trim().toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
             wordsCorrect++;
             console.log(wordsCorrect);
             doCorrect();
@@ -82,15 +93,29 @@ function proceedToResults() {
 }
 
 // Plays word sound file using HTML5 <audio> tag
-
+function loadCorrect() {
+	var soundFile = document.createElement("audio");
+    	soundFile.src = "audioFiles/crct.wav";
+    	soundFile.load();
+    	//soundFile.preload = "auto";
+	correctAudio = soundFile;
+}
+function loadWrong() {
+	var soundFile = document.createElement("audio");
+    	soundFile.src = "audioFiles/wrg.wav";
+    	soundFile.load();
+    	//soundFile.preload = "auto";
+	wrongAudio = soundFile;
+}
 function doCorrect() {
-    playAudioFile("crct.wav");
+	correctAudio.play();
     responseImage("green-check.png");
 }
 function doWrong() {
-    playAudioFile("wrg.wav");
+	wrongAudio.play();
     responseImage("red-x.png");
 }
+
 function responseImage(img) {
     var text = "<img style=\"height: 25%; width: 25%; display: block;margin-left: auto; margin-right: auto;\" class=\"img-responsive\" src=\"img/" + img + "\"></img>"
     document.getElementById("imageContainer").innerHTML = text;
@@ -114,21 +139,21 @@ function whiteTextField() {
 }
 
 function playWordAudio(word) {
-    playAudioFile(word + ".mp3")
+    playAudioFile();
 }
 function returnHome() {
     window.location.href = "mainpage.html"
 }
 function playAudioFile(file) {
-    soundFile = document.createElement("audio");
-    soundFile.src = "audioFiles/" + file;
-    soundFile.load();
-    soundFile.attribute("onended") = "removeAudioFile()";
-    soundFile.preload = "auto";
-    soundFile.play();
+    	if(file == undefined) {
+		audioFiles[currentWordIndex].play();
+	}
+	else {
+   		var soundFile = new Audio("audioFiles/" + file;);
+		soundFile.load();
+    		soundFile.play();
+	}
 }
-function removeAudioFile() {
-   soundFile.remove();
 function supports_html5_storage() {
     try {
         return 'localStorage' in window && window['localStorage'] !== null;
