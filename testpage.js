@@ -123,7 +123,7 @@ function playAudioFile(file) {
     soundFile = document.createElement("audio");
     soundFile.src = "audioFiles/" + file;
     soundFile.load();
-    soundFile.attribute("onload") = "removeAudioFile()";
+    soundFile.attribute("onended") = "removeAudioFile()";
     soundFile.preload = "auto";
     soundFile.play();
 }
