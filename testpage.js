@@ -7,10 +7,11 @@ var responseImg;
 var soundFile;
 var correctAudio;
 var wrongAudio;
+var clickedOnce = false;
 
 // Passes testObject (array of words to be tested on)
 function loadTest() {
-    
+    clickedOnce = true;
     
     // Eventually this will read a value from the cookie.
     // For now, it will just instantiate the wordList array
@@ -26,20 +27,27 @@ function loadTest() {
     	for(var i = 0; i<wordList.length; i++) {
 		var soundFile = new Audio("audioFiles/" + wordList[i] + ".mp3");
 		soundFile.load();
+		audioFiles[i] = soundFile;
 	}
 	
 	whiteTextField();
     //doWord(wordList[currentWordIndex]);
-
+	doWord(wordList[0]);
 }
 
 // Loads our test and starts the user off
 // with the first word in the word array (wordList)
-function handleTest() {
-    loadTest();
-    
-    doWord(wordList[0]);
+
+// Something must be clicked to load any audio on iOS,
+// so we're having the user click the text input field,
+// like they would anyway.
+
+function checkLoaded() {
+	if(clickedOnce == false) {
+		loadTest();
+	}
 }
+
 function doWord(word) {
     if(word === undefined) {
         playWordAudio(wordList[currentWordIndex]);
@@ -149,7 +157,7 @@ function playAudioFile(file) {
 		audioFiles[currentWordIndex].play();
 	}
 	else {
-   		var soundFile = new Audio("audioFiles/" + file;);
+   		var soundFile = new Audio("audioFiles/" + file);
 		soundFile.load();
     		soundFile.play();
 	}

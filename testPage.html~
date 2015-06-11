@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title id="page-title"></title>
+    <title id="page-title">Spelling Test</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body onload="handleTest();" style="background-color: rgb(200, 255, 230);">
+  <body style="background-color: rgb(200, 255, 230);">
 
     <div class="container-fluid">
 		
@@ -36,7 +36,7 @@
 	  
 	      <div class="form-group">
 		<div class="text-center container-fluid">
-		  <input autofocus style="text-align: center;font-size: 25pt;height:50px;" autoautocomplete="off" id="wordSubmission" class="form-control" type="text">
+		  <input autofocus onclick="checkLoaded()" style="text-align: center;font-size: 25pt;height:50px;" autoautocomplete="off" id="wordSubmission" class="form-control" type="text">
 		    <br>
 		  </input>
 		  <button onclick="returnHome();" class="btn btn-default"><img style="height: 40px;" class="img-responsive" src="img/home.png"></img></button>
