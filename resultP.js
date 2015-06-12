@@ -5,14 +5,19 @@ var numCorrect;
 //pass off wordlist, store it in localstorage, redirect to test page (button) and button to main page
 
 function grabStuff() {
-    results = localStorage.getItem("results");
+    var test = JSON.parse(window.localStorage.getItem("test"));
+    appendTitle(test);
+    results = window.localStorage.getItem("results");
     wordList = JSON.parse(results)[0];
-    console.log(wordList)
+    console.log(wordList);
     wordTotal = wordList.length;
     userAnswers = JSON.parse(results)[1];
     numCorrect = JSON.parse(results)[2];
+    console.log(userAnswers);
 }
-
+function appendTitle(test) {
+         document.getElementById("howdo").innerHTML = "How Did You Do On " + test + "?";
+}
 
 function runnerFunc() {
     grabStuff();
@@ -28,7 +33,7 @@ function retake() {
 	window.location.href = "testPage.html";
 }
 function toMain() {
-	window.location.href = "mainpage.html";
+	window.location.href = "index.html";
 }
 
 
@@ -63,6 +68,7 @@ function greet() {
     } else {
         greeting = "You're on your way!";
     }
+    document.getElementById("success-message").style.fontWeight = "bold";
     document.getElementById("success-message").innerHTML = greeting;
 
 }
@@ -74,17 +80,19 @@ function tally(numCorrect,wordTotal) {
 
 function showResponsesvCorrect() {
     var list = "";
-    for (i=0; i<userAnswers.length;i++) {
-	list += "<tr>";
-	if(userAnswers[i].trim().toLowerCase() == wordList[i].toLowerCase()) {
-		list += "<td><span><img src='img/green-check.png' height=10px width=10px /n></span></td>";
-	}
-	else {
-		list += "<td><span><img src='img/red-x.png' height=10px width=10px /n></span></td>";
-	}
-	list += "<td>" + userAnswers[i] + "</td><td>" + wordList[i] + "</td></tr>";
-	
-    }
+    
+         for (i=0; i<wordList.length;i++) {
+                  list += "<tr>";
+                  if(userAnswers[i].trim().toLowerCase() == wordList[i].toLowerCase()) {
+                          list += "<td><span><img src='img/green-check.png' height=10px width=10px /n></span></td>";
+                  }
+                  else {
+                          list += "<td><span><img src='img/red-x.png' height=10px width=10px /n></span></td>";
+                  }
+                  list += "<td>" + userAnswers[i] + "</td><td>" + wordList[i] + "</td></tr>";
+         }
+    
+    
     document.getElementById("responseTable").innerHTML = list;
 
 }

@@ -1,3 +1,4 @@
+var test;
 var oA1 = ["the", "of", "and", "a","to"];
 var oA2 = ["in", "is", "you","that","it"];
 var oA3 = ["he", "for", "was","on","are"];
@@ -104,256 +105,346 @@ function doHandoff(testID) {
     switch(testID) {
         case 1:
             	item = JSON.stringify(oA1);
-		break;
+		test = JSON.stringify("Test A, Set 1");
+                break;
 	case 2:
 		item = JSON.stringify(oA2);
-		break;
+		test = JSON.stringify("Test A, Set 2");
+                break;
 	case 3:
 		item = JSON.stringify(oA3);
-		break;
+		test = JSON.stringify("Test A, Set 3");
+                break;
 	case 4:
 		item = JSON.stringify(oB1);
-		break;
-	case 5:
+		test = JSON.stringify("Test B, Set 1");
+                break;
+    	case 5:
 		item = JSON.stringify(oB2);
-		break;
+		test = JSON.stringify("Test B, Set 2");
+                break;
 	case 6:
 		item = JSON.stringify(oB3);
-		break;
+		test = JSON.stringify("Test B, Set 3");
+                break;
 
 	case 7:
 		item = JSON.stringify(twoC1);
-		break;
+		test = JSON.stringify("Test C, Set 1");
+                break;
 	case 8:
 		item = JSON.stringify(twoC2);
-		break;
+		test = JSON.stringify("Test C, Set 2");
+                break;
 	case 9:
 		item = JSON.stringify(twoC3);
-		break;
+		test = JSON.stringify("Test C, Set 3");
+                break;
 	case 10:
 		item = JSON.stringify(twoD1);
-		break;
+		test = JSON.stringify("Test D, Set 1");
+                break;
 	case 11:
 		item = JSON.stringify(twoD2);
-		break;
+		test = JSON.stringify("Test D, Set 2");
+                break;
 	case 12:
 		item = JSON.stringify(twoD3);
-		break;
+		test = JSON.stringify("Test D, Set 3");
+                break;
 
 	case 13:
 		item = JSON.stringify(thrE1);
-		break;
+		test = JSON.stringify("Test E, Set 1");
+                break;
 	case 14:
 		item = JSON.stringify(thrE2);
-		break;
+		test = JSON.stringify("Test E, Set 2");
+                break;
 	case 15:
 		item = JSON.stringify(thrE3);
-		break;
+		test = JSON.stringify("Test E, Set 3");
+                break;
 	case 16:
 		item = JSON.stringify(thrF1);
-		break;
+		test = JSON.stringify("Test F, Set 1");
+                break;
 	case 17:
 		item = JSON.stringify(thrF2);
-		break;
+		test = JSON.stringify("Test F, Set 2");
+                break;
 	case 18:
 		item = JSON.stringify(thrF3);
-		break;
+		test = JSON.stringify("Test F, Set 3");
+                break;
 
 	case 19:
 		item = JSON.stringify(forG1);
-		break;
+    		test = JSON.stringify("Test G, Set 1");
+                break;
 	case 20:
 		item = JSON.stringify(forG2);
-		break;
+		test = JSON.stringify("Test G, Set 2");
+                break;
 	case 21:
 		item = JSON.stringify(forG3);
-		break;
+		test = JSON.stringify("Test G, Set 3");
+                break;
 	case 22:
 		item = JSON.stringify(forH1);
-		break;
+		test = JSON.stringify("Test H, Set 1");
+                break;
 	case 23:
 		item = JSON.stringify(forH2);
-		break;
+		test = JSON.stringify("Test H, Set 2");
+                break;
 	case 24:
 		item = JSON.stringify(forH3);
-		break;
+		test = JSON.stringify("Test H, Set 3");
+                break;
 
 	case 25:
 		item = JSON.stringify(fivI1);
-		break;
+		test = JSON.stringify("Test I, Set 1");
+                break;
 	case 26:
 		item = JSON.stringify(fivI2);
-		break;
+		test = JSON.stringify("Test I, Set 2");
+                break;
 	case 27:
 		item = JSON.stringify(fivI3);
-		break;
+		test = JSON.stringify("Test I, Set 3");
+                break;
 	case 28:
 		item = JSON.stringify(fivJ1);
-		break;
+		test = JSON.stringify("Test J, Set 1");
+                break;
 	case 29:
 		item = JSON.stringify(fivJ2);
-		break;
+		test = JSON.stringify("Test J, Set 2");
+                break;
 	case 30:
 		item = JSON.stringify(fivJ3);
-		break;
+		test = JSON.stringify("Test J, Set 3");
+                break;
 
 	case 31:
 		item = JSON.stringify(sixK1);
-		break;
+		test = JSON.stringify("Test K, Set 1");
+                break;
 	case 32:
 		item = JSON.stringify(sixK2);
-		break;
+		test = JSON.stringify("Test K, Set 2");
+                break;
 	case 33:
 		item = JSON.stringify(sixK3);
-		break;
+		test = JSON.stringify("Test K, Set 3");
+                break;
 	case 34:
 		item = JSON.stringify(sixL1);
-		break;
+		test = JSON.stringify("Test L, Set 1");
+                break;
 	case 35:
 		item = JSON.stringify(sixL2);
-		break;
+		test = JSON.stringify("Test L, Set 2");
+                break;
 	case 36:
 		item = JSON.stringify(sixL3);
-		break;
+		test = JSON.stringify("Test L, Set 3");
+                break;
 
 	case 37:
 		item = JSON.stringify(sevM1);
-		break;
+		test = JSON.stringify("Test M, Set 1");
+                break;
 	case 38:
 		item = JSON.stringify(sevM2);
-		break;
+		test = JSON.stringify("Test M, Set 2");
+                break;
 	case 39:
 		item = JSON.stringify(sevM3);
-		break;
+		test = JSON.stringify("Test M, Set 3");
+                break;
 	case 40:
 		item = JSON.stringify(sevN1);
-		break;
+		test = JSON.stringify("Test N, Set 1");
+                break;
 	case 41:
 		item = JSON.stringify(sevN2);
-		break;
+		test = JSON.stringify("Test N, Set 2");
+                break;
 	case 42:
 		item = JSON.stringify(sevN3);
-		break;
+		test = JSON.stringify("Test N, Set 3");
+                break;
 
 	case 43:
 		item = JSON.stringify(eiO1);
-		break;
+		test = JSON.stringify("Test O, Set 1");
+                break;
 	case 44:
 		item = JSON.stringify(eiO2);
-		break;
+		test = JSON.stringify("Test O, Set 2");
+                break;
 	case 45:
 		item = JSON.stringify(eiO3);
-		break;
+		test = JSON.stringify("Test O, Set 3");
+                break;
 	case 46:
 		item = JSON.stringify(eiP1);
-		break;
+		test = JSON.stringify("Test P, Set 1");
+                break;
 	case 47:
 		item = JSON.stringify(eiP2);
-		break;
+		test = JSON.stringify("Test P, Set 2");
+                break;
 	case 48:
 		item = JSON.stringify(eiP3);
-		break;
+		test = JSON.stringify("Test P, Set 3");
+                break;
 	
 	case 49:
 		item = JSON.stringify(niQ1);
-		break;
+		test = JSON.stringify("Test Q, Set 1");
+                break;
 	case 50:
 		item = JSON.stringify(niQ2);
-		break;
+		test = JSON.stringify("Test Q, Set 2");
+                break;
 	case 51:
 		item = JSON.stringify(niQ3);
-		break;
+		test = JSON.stringify("Test Q, Set 3");
+                break;
 	case 52:
 		item = JSON.stringify(niR1);
-		break;
+		test = JSON.stringify("Test R, Set 1");
+                break;
 	case 53:
 		item = JSON.stringify(niR2);
-		break;
+		test = JSON.stringify("Test R, Set 2");
+                break;
 	case 54:
 		item = JSON.stringify(niR3);
-		break;
+		test = JSON.stringify("Test R, Set 3");
+                break;
 
-	case 54:
-		item = JSON.stringify(teS1);
-		break;
 	case 55:
-		item = JSON.stringify(teS2);
-		break;
+		item = JSON.stringify(teS1);
+		test = JSON.stringify("Test S, Set 1");
+                break;
 	case 56:
+		item = JSON.stringify(teS2);
+		test = JSON.stringify("Test S, Set 2");
+                break;
+    	case 57:
 		item = JSON.stringify(teS3);
-		break;
-	case 57:
-		item = JSON.stringify(teT1);
-		break;
+		test = JSON.stringify("Test S, Set 3");
+                break;
 	case 58:
-		item = JSON.stringify(teT2);
-		break;
+		item = JSON.stringify(teT1);
+		test = JSON.stringify("Test T, Set 1");
+                break;
 	case 59:
-		item = JSON.stringify(teT3);
-		break;
-
+		item = JSON.stringify(teT2);
+		test = JSON.stringify("Test T, Set 2");
+                break;
 	case 60:
-		item = JSON.stringify(elU1);
-		break;
+		item = JSON.stringify(teT3);
+		test = JSON.stringify("Test U, Set 3");
+                break;
+
 	case 61:
-		item = JSON.stringify(elU2);
-		break;
+		item = JSON.stringify(elU1);
+		test = JSON.stringify("Test U, Set 1");
+                break;
 	case 62:
+		item = JSON.stringify(elU2);
+		test = JSON.stringify("Test U, Set 2");
+                break;
+    	case 63:
 		item = JSON.stringify(elU3);
-		break;
-	case 63:
-		item = JSON.stringify(elV1);
-		break;
+		test = JSON.stringify("Test V, Set 3");
+                break;
 	case 64:
-		item = JSON.stringify(elV2);
-		break;
+		item = JSON.stringify(elV1);
+		test = JSON.stringify("Test V, Set 1");
+                break;
 	case 65:
-		item = JSON.stringify(elV3);
-		break;
-
+		item = JSON.stringify(elV2);
+		test = JSON.stringify("Test V, Set 2");
+                break;
 	case 66:
-		item = JSON.stringify(tweW1);
-		break;
+		item = JSON.stringify(elV3);
+		test = JSON.stringify("Test W, Set 3");
+                break;
+
 	case 67:
-		item = JSON.stringify(tweW2);
-		break;
+		item = JSON.stringify(tweW1);
+                test = JSON.stringify("Test W, Set 1");
+
+                break;
 	case 68:
-		item = JSON.stringify(tweW3);
-		break;
+		item = JSON.stringify(tweW2);
+                test = JSON.stringify("Test W, Set 2");
+
+                break;
 	case 69:
-		item = JSON.stringify(tweX1);
-		break;
+		item = JSON.stringify(tweW3);
+                test = JSON.stringify("Test W, Set 3");
+
+                break;
 	case 70:
+		item = JSON.stringify(tweX1);
+                test = JSON.stringify("Test X, Set 1");
+
+                break;
+	case 71:
 		item = JSON.stringify(tweX2);
-		break;
-	case 71:
-		item = JSON.stringify(tweX3);
-		break;	
+                test = JSON.stringify("Test X, Set 2");
 
-
-	case 71:
-		item = JSON.stringify(thteY1);	
-		break;
+                break;
 	case 72:
-		item = JSON.stringify(thteY2);	
-		break;
+		item = JSON.stringify(tweX3);
+                test = JSON.stringify("Test X, Set 3");
+
+                break;	
+
+
 	case 73:
-		item = JSON.stringify(thteY3);
-		break;	
+		item = JSON.stringify(thteY1);
+                test = JSON.stringify("Test Y, Set 1");
+
+                break;
 	case 74:
-		item = JSON.stringify(thteZ1);	
-		break;
+		item = JSON.stringify(thteY2);
+                test = JSON.stringify("Test Y, Set 2");
+
+                break;
 	case 75:
-		item = JSON.stringify(thteZ2);
-		break;
+		item = JSON.stringify(thteY3);
+                test = JSON.stringify("Test Y, Set 3");
+
+                break;	
 	case 76:
+		item = JSON.stringify(thteZ1);
+                test = JSON.stringify("Test Z, Set 1");
+
+                break;
+	case 77:
+		item = JSON.stringify(thteZ2);
+                test = JSON.stringify("Test Z, Set 2");
+
+                break;
+	case 78:
 		item = JSON.stringify(thteZ3);
-		
-		break;
+		test = JSON.stringify("Test Z, Set 3");
+
+                break;
 
          
             
     }
+    window.localStorage.setItem("test", test);
     console.log(item);
     window.localStorage.setItem("wordList", item);
     

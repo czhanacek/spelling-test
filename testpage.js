@@ -11,6 +11,7 @@ var clickedOnce = false;
 
 // Passes testObject (array of words to be tested on)
 function loadTest() {
+    loadMessage();
     clickedOnce = true;
     
     // Eventually this will read a value from the cookie.
@@ -29,22 +30,29 @@ function loadTest() {
 		soundFile.load();
 		audioFiles[i] = soundFile;
 	}
-	
+	audioFiles[0].addEventListener("canplaythrough", clearMessage);
 	whiteTextField();
     //doWord(wordList[currentWordIndex]);
-	doWord(wordList[0]);
+	
 }
-
+function loadMessage() {
+    document.getElementById("ready").innerHTML = "Loading...";
+    console.log("loading");
+}
+function clearMessage() {
+    
+    doWord(wordList[0]);
+    document.getElementById("ready").innerHTML = "";
+}
 // Loads our test and starts the user off
 // with the first word in the word array (wordList)
 
 // Something must be clicked to load any audio on iOS,
 // so we're having the user click the text input field,
 // like they would anyway.
-
 function checkLoaded() {
 	if(clickedOnce == false) {
-		loadTest();
+                loadTest();
 	}
 }
 
@@ -60,15 +68,15 @@ function replayWord() {
     playWordAudio();
 }
 function wordSubmitted() {
-	audioFiles[currentWordIndex].pause();
+    audioFiles[currentWordIndex].pause();
     var userSubmission = document.getElementById("wordSubmission").value;
     document.getElementById("wordSubmission").value = "";
-    userResponseList.push(userSubmission);
     document.getElementById("wordSubmission").focus();
     if (userSubmission === "") {
         highlightTextField();
     }
     else {
+        userResponseList[currentWordIndex] = userSubmission;
         if(userSubmission.trim().toLowerCase() === wordList[currentWordIndex].toLowerCase()) {
             wordsCorrect++;
             console.log(wordsCorrect);
@@ -97,10 +105,10 @@ function proceedToResults() {
 	var final = [wordList, userResponseList, wordsCorrect];
 	item = JSON.stringify(final);
 	window.localStorage.setItem("results", item);
-	window.location.href = "resultPage.html"
+	window.location.href = "resultPage.html";
 }
 
-// Plays word sound file using HTML5 <audio> tag
+
 function loadCorrect() {
 	var soundFile = document.createElement("audio");
     	soundFile.src = "audioFiles/crct.wav";
@@ -150,7 +158,7 @@ function playWordAudio(word) {
     playAudioFile();
 }
 function returnHome() {
-    window.location.href = "mainpage.html"
+    window.location.href = "index.html"
 }
 function playAudioFile(file) {
     	if(file == undefined) {
